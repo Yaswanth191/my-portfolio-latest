@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Yaswanth",
+  lastName: "Panchakarla",
+  name: `Yaswanth Panchakarla`,
+  role: "Software Engineer Associate",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "yaswanthpanchakarla1@gmail.com",
+  location: "Asia/Kolkata", // IANA time zone for India
+  languages: ["English"], // Based on resume; add more if applicable
 };
 
 const newsletter: Newsletter = {
@@ -24,17 +24,12 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Yaswanth191",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/yaswanth-panchakarla-510530291/",
   },
   {
     name: "Email",
@@ -49,30 +44,25 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building scalable full-stack applications</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">LegalXpress</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/legalxpress-legal-document-management-system",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Yaswanth Panchakarla, Software Engineer Associate at{" "}
+      <strong>Blackcoffer</strong>, where I design and deploy scalable, secure, and data-driven applications.
+      <br /> After hours, I build AI-powered projects.
     </>
   ),
 };
@@ -98,9 +88,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Yaswanth Panchakarla is a Software Engineer Associate at Blackcoffer with experience in Full Stack Development and Cloud. Skilled at designing and deploying scalable, secure, and data-driven applications. Strong background in Python, Next.js, Supabase, AWS, and NLP models with proven ability to deliver production-grade solutions.
       </>
     ),
   },
@@ -109,41 +97,43 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Blackcoffer (OPC) Pvt. Ltd.",
+        timeframe: "May 2025 – Present",
+        role: "Software Engineer Associate",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Built role-based authentication and access control with Supabase Auth (SSR).
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Designed and deployed document lifecycle workflows (create, draft, e-sign, billing, GST integration).
+          </>,
+          <>
+            Engineered a template management system with DOCX uploads, placeholder extraction, and PDF generation.
+          </>,
+          <>
+            Developed admin dashboards for analytics, pricing, and support ticketing.
+          </>,
+          <>
+            Integrated WordPress APIs for blogs, services, and consumer testimonials.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/legalxpress/cover.jpg",
+            alt: "LegalXpress Project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "IBM SkillsBuild",
+        timeframe: "Jun 2024 – Aug 2024",
+        role: "Intern (AI & Frontend Development)",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Built an AI-powered chatbot and frontend web app as part of training.
           </>,
         ],
         images: [],
@@ -155,12 +145,8 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Sri Vasavi Engineering College",
+        description: <>B.Tech – CSE (2020–2024)</>,
       },
     ],
   },
@@ -169,61 +155,70 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Next.js",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Developing full-stack applications with Next.js, TypeScript, and TailwindCSS for intuitive UI.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Next.js",
+            icon: "nextjs",
+          },
+          {
+            name: "TypeScript",
+            icon: "typescript",
+          },
+          {
+            name: "JavaScript",
+            icon: "javascript",
+          },
+          {
+            name: "TailwindCSS",
+            icon: "tailwind",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/projects/nextjs-project.jpg",
+            alt: "Next.js Project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
+        title: "Supabase",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Implementing real-time databases and authentication with Supabase.</>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
           {
             name: "Supabase",
             icon: "supabase",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Python",
+        description: (
+          <>Utilizing Python for backend development, NLP models, and scripting.</>
+        ),
+        tags: [
+          {
+            name: "Python",
+            icon: "python",
+          },
+        ],
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            src: "/images/projects/python-project.jpg",
+            alt: "Python Project",
             width: 16,
             height: 9,
           },
         ],
-      },  
+      },
     ],
   },
 };
